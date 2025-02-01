@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Words from './Words';
+/* Power-Up Kit: Add fake loading progress bar. */
+import LoadingBar from '../LoadingBar';
 
 function Vocabulary({ BACKEND_API_HOSTNAME }) {
 
@@ -34,8 +36,8 @@ function Vocabulary({ BACKEND_API_HOSTNAME }) {
     fetchVocabulary();
   }, [currentLesson, BACKEND_API_HOSTNAME]);
 
-
-  if (loading) return <span className='flex align-bottom'>Loading Words...<br />you may need to wait up to 50 seconds in first load</span>;
+  /* Power-Up Kit: Add fake loading progress bar. */
+  if (loading) return <LoadingBar />;
   if (error) return <p>{error}</p>;
 
   return (

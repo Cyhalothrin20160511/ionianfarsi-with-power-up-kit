@@ -12,7 +12,8 @@ import MatchSoundToWritten_form from './ExerciseKinds/MatchSoundToWritten_form';
 import SuccessSound from '../sounds/fanfare.mp3';
 import shortSuccessSound from '../sounds/short-fanfare.wav';
 import wrongAnswer from '../sounds/wrong-answer.wav';
-
+/* Power-Up Kit: Add fake loading progress bar. */
+import LoadingBar from '../LoadingBar';
 
 function Practice({ BACKEND_API_HOSTNAME }) {
     // -----This is Practice Session-----
@@ -181,9 +182,8 @@ function Practice({ BACKEND_API_HOSTNAME }) {
         }
     }
 
-
-
-    if (loading) return <span className='flex align-bottom'>Loading...</span>;
+    /* Power-Up Kit: Add fake loading progress bar. */
+    if (loading) return <LoadingBar />;
     if (error) return <p>{error}</p>;
 
     // Get the current exercise component to render

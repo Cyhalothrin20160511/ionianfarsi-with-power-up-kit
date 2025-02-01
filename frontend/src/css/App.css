@@ -54,6 +54,13 @@ img {
   opacity: 0.8;
 }
 
+/* Power-Up Kit: Text Centerer */
+.io-text-centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* --------------------|| APPLICATION --------------------*/
 .app-layout {
   display: flex;
@@ -189,7 +196,9 @@ img {
   font-size: 1.5rem;
   text-decoration: none;
   color: #333;
-  padding-bottom: 4rem;
+  /* Power-Up Kit: Adjust padding to center */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: var(--sea-color);
 }
 

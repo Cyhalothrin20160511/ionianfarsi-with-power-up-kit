@@ -1,0 +1,58 @@
+/* Power-Up Kit: Fake loading progress bar */
+.io-lb-container {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.io-lb-avatar {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.io-lb-chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.io-lb-message {
+    background-color: rgb(15, 134, 144);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    position: relative;
+    font-size: 1rem;
+}
+
+.io-lb-loader {
+    width: 100%;
+    height: 50px;
+    background: #f3f3f3;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.io-lb-progress-bar {
+    width: 0;
+    height: 100%;
+    background: rgb(15, 134, 144);
+    border-radius: 30px;
+    animation: loadProgress 300s linear forwards;
+}
+
+@keyframes loadProgress {
+    0% { width: 0; }
+    0.5% { width: 50%; }
+    1% { width: 90%; }
+    2% { width: 95%; }
+    100% { width: 100%; }
+}

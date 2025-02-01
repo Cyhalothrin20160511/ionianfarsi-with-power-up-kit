@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+/* Power-Up Kit: Add fake loading progress bar. */
+import LoadingBar from '../LoadingBar';
 
 function Exercise({ BACKEND_API_HOSTNAME }) {
 
@@ -26,25 +28,34 @@ function Exercise({ BACKEND_API_HOSTNAME }) {
     fetchLessons();
   }, [BACKEND_API_HOSTNAME]);
 
-  if (loading) return <p>Loading lessons, <br />you may need to wait up to 50 seconds in first load</p>;
+  /* Power-Up Kit: Add fake loading progress bar. */
+  if (loading) return <LoadingBar />;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="lesson-navigator">
+      {/* Power-Up Kit: Adjust line breaks to beautify the page. */}
+      <br />
       <h2>Choose a Lesson</h2>
+      <br />
       <div className="lessons-container">
         {lessons.map((lesson) => (
           <Link
             key={lesson.number}
             to="./practice"
             state = {{ ChoosenLesson: lesson.number }}
-            className="lesson-nav-card io-button"
+            className="lesson-nav-card io-button io-text-centerer"
           >
-            Lesson {lesson.number}:
-            {lesson.functionality}
+          {/* Power-Up Kit: Add io-text-centerer to center the text. */}
+            <div>
+              Lesson {lesson.number}:
+              <br />
+              {lesson.functionality}
+            </div>
           </Link>
         ))}
       </div>
+      <br /><br />
     </div>
   );
 }

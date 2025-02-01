@@ -35,10 +35,10 @@ body, html {
     height: 100%;
   }
   .home-content h1 {
-    font-size: 2rem;
-    margin-top: 2vh;
+    font-size: 4rem;
+    margin-top: 20vh;
     animation: fadeIn 1s ease-out;
-    flex-basis: 65%;
+    flex-basis: 35%;
     text-shadow: black -2px 2px;
   }
   
