@@ -12,8 +12,10 @@ import MatchSoundToWritten_form from './ExerciseKinds/MatchSoundToWritten_form';
 import SuccessSound from '../sounds/fanfare.mp3';
 import shortSuccessSound from '../sounds/short-fanfare.wav';
 import wrongAnswer from '../sounds/wrong-answer.wav';
-/* Power-Up Kit: Add fake loading progress bar. */
-import LoadingBar from '../LoadingBar';
+
+/* Power-Up Kit: Add Loading & Error Page. */
+import PUKLoading from '../PUKMisc/PUKLoading';
+import PUKError from '../PUKMisc/PUKError';
 
 function Practice({ BACKEND_API_HOSTNAME }) {
     // -----This is Practice Session-----
@@ -182,9 +184,9 @@ function Practice({ BACKEND_API_HOSTNAME }) {
         }
     }
 
-    /* Power-Up Kit: Add fake loading progress bar. */
-    if (loading) return <LoadingBar />;
-    if (error) return <p>{error}</p>;
+    /* Power-Up Kit: Add Loading & Error Page. */
+    if (loading) return <PUKLoading />;
+    if (error) return <PUKError message={error} />;
 
     // Get the current exercise component to render
     const CurrentExercise = exercise_kinds[exerciseIndex - 1]?.component;

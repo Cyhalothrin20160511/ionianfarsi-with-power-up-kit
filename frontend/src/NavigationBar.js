@@ -28,26 +28,26 @@ const selected_button = (pathToButton.find(({ key }) => currentPath.startsWith(k
       <div className='navigation-bar-innercontainer'>
         <h1 className="logo"><img src={IonianFarsiLogo} alt="IonianFarsi logo" /></h1>
         <ul className="nav-list">
-        {/* Power-Up Kit: Add io-text-centerer to center the text. */}
+        {/* Power-Up Kit: Add io-puk-text-centerer to center the text. */}
           <li>
             {/* Power-Up Kit: Make the path more specific so the vocabulary function is the same as the exercise function, the latter starts with selecting a lesson. */}
             <Link className={selected_button === 'vocabulary' ? 'selected-button' : null} to='/vocabulary/choose-lesson'>
-              <FaBook className="svg FaBook" /><span className='navigation-page-name io-text-centerer'> VOCABULARY</span>
+              <FaBook className="svg FaBook" /><span className='navigation-page-name io-puk-text-centerer'> VOCABULARY</span>
             </Link>
           </li>
           <li>
             <Link className={selected_button === 'exercise' ? 'selected-button' : null} to='/exercise'>
-              <LuBrainCircuit className="svg LuBrainCircuit" /><span className='navigation-page-name io-text-centerer'> EXERCISE</span>
+              <LuBrainCircuit className="svg LuBrainCircuit" /><span className='navigation-page-name io-puk-text-centerer'> EXERCISE</span>
             </Link>
           </li>
           <li>
             <Link className={selected_button === 'profile' ? 'selected-button' : null} to='/profile'>
-              <CgProfile className="svg CgProfile" /><span className='navigation-page-name io-text-centerer'> PROFILE</span>
+              <CgProfile className="svg CgProfile" /><span className='navigation-page-name io-puk-text-centerer'> PROFILE</span>
             </Link>
           </li>
           <li>
             <Link className={selected_button === 'more' ? 'selected-button' : null} to='/more'>
-              <BsThreeDots className='svg BsThreeDots'/><span className='navigation-page-name io-text-centerer'> MORE</span>
+              <BsThreeDots className='svg BsThreeDots'/><span className='navigation-page-name io-puk-text-centerer'> MORE</span>
             </Link>
           </li>
         </ul>

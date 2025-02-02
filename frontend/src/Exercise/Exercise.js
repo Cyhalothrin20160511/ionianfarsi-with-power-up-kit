@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-/* Power-Up Kit: Add fake loading progress bar. */
-import LoadingBar from '../LoadingBar';
+
+/* Power-Up Kit: Add Loading & Error Page. */
+import PUKLoading from '../PUKMisc/PUKLoading';
+import PUKError from '../PUKMisc/PUKError';
 
 function Exercise({ BACKEND_API_HOSTNAME }) {
 
@@ -28,9 +30,9 @@ function Exercise({ BACKEND_API_HOSTNAME }) {
     fetchLessons();
   }, [BACKEND_API_HOSTNAME]);
 
-  /* Power-Up Kit: Add fake loading progress bar. */
-  if (loading) return <LoadingBar />;
-  if (error) return <p>{error}</p>;
+  /* Power-Up Kit: Add Loading & Error Page. */
+  if (loading) return <PUKLoading />;
+  if (error) return <PUKError message={error} />;
 
   return (
     <div className="lesson-navigator">
@@ -44,9 +46,9 @@ function Exercise({ BACKEND_API_HOSTNAME }) {
             key={lesson.number}
             to="./practice"
             state = {{ ChoosenLesson: lesson.number }}
-            className="lesson-nav-card io-button io-text-centerer"
+            className="lesson-nav-card io-button io-puk-text-centerer"
           >
-          {/* Power-Up Kit: Add io-text-centerer to center the text. */}
+          {/* Power-Up Kit: Add io-puk-text-centerer to center the text. */}
             <div>
               Lesson {lesson.number}:
               <br />

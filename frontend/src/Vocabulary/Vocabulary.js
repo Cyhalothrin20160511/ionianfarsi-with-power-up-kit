@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Words from './Words';
-/* Power-Up Kit: Add fake loading progress bar. */
-import LoadingBar from '../LoadingBar';
+
+/* Power-Up Kit: Add Loading & Error Page. */
+import PUKLoading from '../PUKMisc/PUKLoading';
+import PUKError from '../PUKMisc/PUKError';
 
 function Vocabulary({ BACKEND_API_HOSTNAME }) {
 
@@ -36,9 +38,9 @@ function Vocabulary({ BACKEND_API_HOSTNAME }) {
     fetchVocabulary();
   }, [currentLesson, BACKEND_API_HOSTNAME]);
 
-  /* Power-Up Kit: Add fake loading progress bar. */
-  if (loading) return <LoadingBar />;
-  if (error) return <p>{error}</p>;
+  /* Power-Up Kit: Add Loading & Error Page. */
+  if (loading) return <PUKLoading />;
+  if (error) return <PUKError message={error} />;
 
   return (
     <div className="vocabulary-container">

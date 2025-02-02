@@ -12,6 +12,8 @@ import More from './More/More.js';
 import Missing from './Missing.js';
 import Home from './Home.js';
 import LessonNavigate from './Vocabulary/LessonNavigator.js';
+// Power-Up Kit: Add a test page
+import PUKTest from './PUKMisc/PUKTest.js';
 
 function App() {
 
@@ -46,6 +48,9 @@ function App() {
 
             <Route path="profile" element={<Profile />} />
             <Route path="more" element={<More />} />
+
+            {/* Power-Up Kit: Add a test page */}
+            <Route path="dokimi" element={<PUKTest />} />
           </Route>
 
           {/* Catch-all for undefined routes */}

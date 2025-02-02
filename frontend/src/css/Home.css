@@ -34,6 +34,8 @@ body, html {
     flex-grow: 1;
     height: 100%;
   }
+  
+  /* Power-Up Kit: Optimize page layout */
   .home-content h1 {
     font-size: 4rem;
     margin-top: 20vh;

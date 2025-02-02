@@ -55,7 +55,7 @@ img {
 }
 
 /* Power-Up Kit: Text Centerer */
-.io-text-centerer {
+.io-puk-text-centerer {
   display: flex;
   justify-content: center;
   align-items: center;
