@@ -1,6 +1,6 @@
 import React from "react";
-import '../css/PUKMisc.css';
-import PUKPortraitUnhappy from '../images/PUKPortraitUnhappy.jpg';
+import '../PUKcss/PUKMisc.css';
+import PUKPortraitUnhappy from '../PUKimages/PUKPortraitUnhappy.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const PUKError = ({ message }) => {

@@ -41,10 +41,11 @@ function LessonNavigator({ BACKEND_API_HOSTNAME }) {
       <h2>Choose a Lesson</h2>
       <br />
       <div className="lessons-container">
+        {/* Power-Up Kit: Modify the path to point to /vocabulary/lesson. */}
         {lessons.map((lesson) => (
           <Link
             key={lesson.number}
-            to="/vocabulary"
+            to="/vocabulary/lesson"
             state = {{ currentLesson: lesson.number }}
             className="lesson-nav-card io-button io-puk-text-centerer"
           >

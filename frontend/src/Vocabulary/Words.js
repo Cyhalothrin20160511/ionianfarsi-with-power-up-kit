@@ -33,7 +33,8 @@ function Words({ letter_id, words }) {
 
   return (
     <div className='word-container'>
-      <h5>Letter ID: {letter_id}</h5>
+      {/* Power-Up Kit: From h5 to h3. */}
+      <h3>Letter ID: {letter_id}</h3>
       <div key={letter_id} className='card-container'>
         {words && words.map(word => (
 

@@ -196,7 +196,7 @@ img {
   font-size: 1.5rem;
   text-decoration: none;
   color: #333;
-  /* Power-Up Kit: Adjust padding to center */
+  /* Power-Up Kit: Adjust padding to center. */
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: var(--sea-color);
@@ -207,6 +207,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Power-Up Kit: Add margin to beautify. */
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .card-container {
   display: flex;

@@ -30,8 +30,7 @@ const selected_button = (pathToButton.find(({ key }) => currentPath.startsWith(k
         <ul className="nav-list">
         {/* Power-Up Kit: Add io-puk-text-centerer to center the text. */}
           <li>
-            {/* Power-Up Kit: Make the path more specific so the vocabulary function is the same as the exercise function, the latter starts with selecting a lesson. */}
-            <Link className={selected_button === 'vocabulary' ? 'selected-button' : null} to='/vocabulary/choose-lesson'>
+            <Link className={selected_button === 'vocabulary' ? 'selected-button' : null} to='/vocabulary'>
               <FaBook className="svg FaBook" /><span className='navigation-page-name io-puk-text-centerer'> VOCABULARY</span>
             </Link>
           </li>

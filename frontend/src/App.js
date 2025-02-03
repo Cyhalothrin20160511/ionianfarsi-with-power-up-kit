@@ -36,9 +36,10 @@ function App() {
           {/* Routes wrapped in Layout */}
           <Route element={<Layout />}>
 
+            {/* Power-Up Kit: Replace the position of Vocabulary and LessonNavigate. */}
             <Route path='vocabulary'>
-              <Route index element={<Vocabulary BACKEND_API_HOSTNAME={BACKEND_API_HOSTNAME} />} />
-              <Route path='choose-lesson' element={<LessonNavigate BACKEND_API_HOSTNAME={BACKEND_API_HOSTNAME} />} />
+              <Route index element={<LessonNavigate BACKEND_API_HOSTNAME={BACKEND_API_HOSTNAME} />} />
+              <Route path='lesson' element={<Vocabulary BACKEND_API_HOSTNAME={BACKEND_API_HOSTNAME} />} />
             </Route>
 
             <Route path='exercise'>

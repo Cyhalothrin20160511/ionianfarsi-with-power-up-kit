@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import '../css/PUKMisc.css';
-import PUKPortraitHappy from '../images/PUKPortraitHappy.jpg';
+import '../PUKcss/PUKMisc.css';
+import PUKPortraitHappy from '../PUKimages/PUKPortraitHappy.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const PUKLoading = () => {

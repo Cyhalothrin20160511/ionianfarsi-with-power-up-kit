@@ -20,8 +20,7 @@ function Home( {BACKEND_API_HOSTNAME} ) {
         <h1>Welcome to IonianFarsi</h1>
         <p>Your gateway to the finest experiences</p>
         <div className="button-container">
-          {/* Power-Up Kit: Make the path more specific so the vocabulary function is the same as the exercise function, the latter starts with selecting a lesson. */}
-          <Link to='/vocabulary/choose-lesson' className='button go-app'>Go to Application</Link>
+          <Link to='/vocabulary' className='button go-app'>Go to Application</Link>
           {/* <Link to='/login' className='button go-app'>Login</Link> */}
           {/* <Link to='/register' className='button go-app'>Register</Link> */}
         </div>

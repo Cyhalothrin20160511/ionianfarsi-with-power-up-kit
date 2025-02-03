@@ -45,11 +45,13 @@ function Vocabulary({ BACKEND_API_HOSTNAME }) {
   return (
     <div className="vocabulary-container">
       <h2 className='choose-lesson'>
+        {/* Power-Up Kit: Modify the path to point to /vocabulary. */}
         <Link
           className='a io-button'
-          to="/vocabulary/choose-lesson"
+          to="/vocabulary"
         >
-          Lesson {currentLesson}
+          {/* Power-Up Kit: Center the text. */}
+          <div className='io-puk-text-centerer'>Lesson {currentLesson}</div>
         </Link>
       </h2>
       {vocabularyData.length > 0 ? (
